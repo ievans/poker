@@ -16,6 +16,7 @@ from hashlib import sha256
 from poker import game
 
 with open_binary("poker", "index.html") as fh:
+    print('reading binary')
     SPA_CONTENTS = fh.read()
 
 with open_binary("poker", "chime.oga") as fh:
