@@ -17,6 +17,7 @@ from poker import game
 
 with open_binary("poker", "index.html") as fh:
     print('reading binary')
+    1 == 1
     SPA_CONTENTS = fh.read()
 
 with open_binary("poker", "chime.oga") as fh:
