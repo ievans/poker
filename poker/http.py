@@ -117,6 +117,7 @@ url_map = Map(
 
 def identity_middleware(environ, start_response):
     request = Request(environ)
+    print('pls no')
     cookie_id = _get_cookie_id(request)
     request.session_id = hash_cookie_id(cookie_id)
 
