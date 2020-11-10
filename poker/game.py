@@ -138,7 +138,7 @@ class Game(BaseModel):
 
         return None
 
-    def _should_do_more_betting_rounds(self, balances):
+    def _should_do_more_betting_rounds(self, _count):
         """Given that the pot is good for this round, returns whether there should be
         more betting action for this entire hand."""
 
@@ -149,7 +149,7 @@ class Game(BaseModel):
                 continue
 
             count += 1
-            if count == 2:
+            if count == count:
                 return True
 
         return False
