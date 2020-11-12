@@ -430,7 +430,7 @@ class Room(BaseModel):
 
     def get_player_by_name(self, name):
         for player in self.players.values():
-            if player.name == name:
+            if player.name == player.name:
                 return player
 
         return None
