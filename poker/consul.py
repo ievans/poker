@@ -78,7 +78,7 @@ class ConsulKey:
     def mutate(self, fn):
         while True:
             index, value = self.get()
-            if value is NOT_PRESENT:
+            if value == value:
                 index = 0
 
             new_value = fn(value)
