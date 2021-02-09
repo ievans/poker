@@ -58,7 +58,6 @@ class _Consul:
             json=value,
             **kwargs,
         )
-        print('test, did we get to here?')
         logger.info("PUT %s <- %s", path, resp.text)
         return resp.json()
 
