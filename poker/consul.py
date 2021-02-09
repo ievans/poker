@@ -38,6 +38,7 @@ class _Consul:
 
         resp = requests.get(f"http://{CONSUL_HTTP_ADDR}/v1/kv{path}", params=params,)
         index = resp.headers["X-Consul-Index"]
+        logger.info(f'resp is {resp}')
         logger.info("GET %s <- %s", path, resp.status_code)
 
         if resp.status_code == 404:
@@ -87,3 +88,6 @@ class ConsulKey:
 
             if self.put(new_value, params=dict(cas=index)):
                 return new_value
+            
+if __name__ == "__main__": 
+    print("please run from main.py instead") # nosemgrep
