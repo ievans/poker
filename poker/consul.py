@@ -38,7 +38,7 @@ class _Consul:
 
         resp = requests.get(f"http://{CONSUL_HTTP_ADDR}/v1/kv{path}", params=params,)
         index = resp.headers["X-Consul-Index"]
-        print(f'resp is {resp}')
+        logger.info(f'resp is {resp}')
         logger.info("GET %s <- %s", path, resp.status_code)
 
         if resp.status_code == 404:
